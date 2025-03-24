@@ -42,6 +42,7 @@ class _AddtaskscreenState extends State<Addtaskscreen> {
           ),
         ),
         backgroundColor: AppColor.PrimaryColor,
+        foregroundColor: AppColor.WhiteColor,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -63,7 +64,7 @@ class _AddtaskscreenState extends State<Addtaskscreen> {
                       controller: TitleController,
                       validator: (value) {
                         if (value != null) {
-                          if (value.length < 5) {
+                          if (value.length < 4) {
                             return "Invalid Title";
                           }
                           return null;
