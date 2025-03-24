@@ -68,18 +68,20 @@ class _HomeScreenState extends State<HomeScreen> {
                         _selectedDate.year == DateTime.now().year
                     ? "Today"
                     : DateFormat('EEEE').format(_selectedDate),
-                CutomWidgetT: CustomButton(
-                    BgColor: AppColor.GreenColor,
-                    txt: "Completed",
-                    width: 135,
-                    onPressed: () {
-                      pushTo(context, CompletedTasksScreen());
-                    }),
+                
                 CutomWidget: CustomButton(
                     txt: "+ Add Task",
                     width: 135,
                     onPressed: () {
                       pushTo(context, Addtaskscreen());
+                    }),
+                    CutomWidgetT: CustomButton(
+                    
+                    BgColor: AppColor.GreenColor,
+                    txt: "Completed Tasks",
+                    width: 210,
+                    onPressed: () {
+                      pushTo(context, CompletedTasksScreen());
                     })),
             SizedBox(
               height: 20,

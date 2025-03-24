@@ -1,9 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:taskati/Core/Utils/Colors.dart';
 import 'package:taskati/Core/model/TaskAdapter.dart';
 import 'package:taskati/Features/Intro/SplashScreen.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:taskati/Features/Upload/UploadScreen.dart';
+import 'package:device_preview_plus/device_preview_plus.dart';
+
 
 void main() async{
    WidgetsFlutterBinding.ensureInitialized();
@@ -12,7 +14,10 @@ void main() async{
    await Hive.openBox("user");
    await Hive.openBox("task");
 
-  runApp(MainApp());
+  runApp(DevicePreview(
+    enabled: !kReleaseMode,
+    builder: (context) => MainApp(), // Wrap your app
+  ),);
 }
 
 class MainApp extends StatelessWidget {

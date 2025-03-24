@@ -39,6 +39,7 @@ dependencies:
   image_picker: ^1.1.2
   lottie: ^3.2.0
   date_picker_timeline: ^1.2.6
+  device_preview_plus: ^2.1.4
   intl: ^0.19.0
 
 dev_dependencies:
